@@ -1,0 +1,534 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target i386-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SpreadsheetView
+import Foundation
+@_exported import SpreadsheetView
+import Swift
+import UIKit
+import _Concurrency
+public struct Gridlines {
+  public var top: SpreadsheetView.GridStyle
+  public var bottom: SpreadsheetView.GridStyle
+  public var left: SpreadsheetView.GridStyle
+  public var right: SpreadsheetView.GridStyle
+  public static func all(_ style: SpreadsheetView.GridStyle) -> SpreadsheetView.Gridlines
+}
+public enum GridStyle {
+  case `default`
+  case none
+  case solid(width: CoreGraphics.CGFloat, color: UIKit.UIColor)
+}
+extension SpreadsheetView.GridStyle : Swift.Equatable {
+  public static func == (lhs: SpreadsheetView.GridStyle, rhs: SpreadsheetView.GridStyle) -> Swift.Bool
+}
+public protocol SpreadsheetViewDelegate : AnyObject {
+  func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, shouldHighlightItemAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, didHighlightItemAt indexPath: Foundation.IndexPath)
+  func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, didUnhighlightItemAt indexPath: Foundation.IndexPath)
+  func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, shouldSelectItemAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, shouldDeselectItemAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, didSelectItemAt indexPath: Foundation.IndexPath)
+  func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, didDeselectItemAt indexPath: Foundation.IndexPath)
+}
+extension SpreadsheetView.SpreadsheetViewDelegate {
+  public func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, shouldHighlightItemAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  public func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, didHighlightItemAt indexPath: Foundation.IndexPath)
+  public func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, didUnhighlightItemAt indexPath: Foundation.IndexPath)
+  public func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, shouldSelectItemAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  public func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, shouldDeselectItemAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  public func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, didSelectItemAt indexPath: Foundation.IndexPath)
+  public func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, didDeselectItemAt indexPath: Foundation.IndexPath)
+}
+extension SpreadsheetView.Spreadsheet : UIKit.UIScrollViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndScrollingAnimation(_ scrollView: UIKit.UIScrollView)
+  @available(iOS 11.0, *)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIKit.UIScrollView)
+}
+extension SpreadsheetView.Spreadsheet {
+  @_Concurrency.MainActor(unsafe) public var contentOffset: CoreGraphics.CGPoint {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var scrollIndicatorInsets: UIKit.UIEdgeInsets {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var contentSize: CoreGraphics.CGSize {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var contentInset: UIKit.UIEdgeInsets {
+    get
+    set
+  }
+  @available(iOS 11.0, *)
+  @_Concurrency.MainActor(unsafe) public var adjustedContentInset: UIKit.UIEdgeInsets {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func flashScrollIndicators()
+  @_Concurrency.MainActor(unsafe) public func setContentOffset(_ contentOffset: CoreGraphics.CGPoint, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func scrollRectToVisible(_ rect: CoreGraphics.CGRect, animated: Swift.Bool)
+  @objc override dynamic public func isKind(of aClass: Swift.AnyClass) -> Swift.Bool
+  @objc override dynamic public func forwardingTarget(for aSelector: ObjectiveC.Selector!) -> Any?
+}
+public enum CircularScrolling {
+  public struct Configuration {
+    public static var none: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.None> {
+      get
+    }
+    public static var horizontally: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Horizontally> {
+      get
+    }
+    public static var vertically: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Vertically> {
+      get
+    }
+    public static var both: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both> {
+      get
+    }
+    public struct Options {
+    }
+  }
+  @_hasMissingDesignatedInitializers public class None : SpreadsheetView.CircularScrollingConfigurationState {
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers public class Horizontally : SpreadsheetView.CircularScrollingConfigurationState {
+    @_hasMissingDesignatedInitializers public class ColumnHeaderNotRepeated : SpreadsheetView.CircularScrollingConfigurationState {
+      @_hasMissingDesignatedInitializers public class RowHeaderStartsFirstColumn : SpreadsheetView.CircularScrollingConfigurationState {
+        @objc deinit
+      }
+      @objc deinit
+    }
+    @_hasMissingDesignatedInitializers public class RowHeaderStartsFirstColumn : SpreadsheetView.CircularScrollingConfigurationState {
+      @objc deinit
+    }
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers public class Vertically : SpreadsheetView.CircularScrollingConfigurationState {
+    @_hasMissingDesignatedInitializers public class RowHeaderNotRepeated : SpreadsheetView.CircularScrollingConfigurationState {
+      @_hasMissingDesignatedInitializers public class ColumnHeaderStartsFirstRow : SpreadsheetView.CircularScrollingConfigurationState {
+        @objc deinit
+      }
+      @objc deinit
+    }
+    @_hasMissingDesignatedInitializers public class ColumnHeaderStartsFirstRow : SpreadsheetView.CircularScrollingConfigurationState {
+      @objc deinit
+    }
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers public class Both : SpreadsheetView.CircularScrollingConfigurationState {
+    @_hasMissingDesignatedInitializers public class ColumnHeaderNotRepeated : SpreadsheetView.CircularScrollingConfigurationState {
+      @_hasMissingDesignatedInitializers public class RowHeaderStartsFirstColumn : SpreadsheetView.CircularScrollingConfigurationState {
+        @objc deinit
+      }
+      @_hasMissingDesignatedInitializers public class ColumnHeaderStartsFirstRow : SpreadsheetView.CircularScrollingConfigurationState {
+        @objc deinit
+      }
+      @_hasMissingDesignatedInitializers public class RowHeaderNotRepeated : SpreadsheetView.CircularScrollingConfigurationState {
+        @_hasMissingDesignatedInitializers public class RowHeaderStartsFirstColumn : SpreadsheetView.CircularScrollingConfigurationState {
+          @objc deinit
+        }
+        @_hasMissingDesignatedInitializers public class ColumnHeaderStartsFirstRow : SpreadsheetView.CircularScrollingConfigurationState {
+          @objc deinit
+        }
+        @objc deinit
+      }
+      @objc deinit
+    }
+    @_hasMissingDesignatedInitializers public class RowHeaderNotRepeated : SpreadsheetView.CircularScrollingConfigurationState {
+      @_hasMissingDesignatedInitializers public class RowHeaderStartsFirstColumn : SpreadsheetView.CircularScrollingConfigurationState {
+        @objc deinit
+      }
+      @_hasMissingDesignatedInitializers public class ColumnHeaderStartsFirstRow : SpreadsheetView.CircularScrollingConfigurationState {
+        @objc deinit
+      }
+      @_hasMissingDesignatedInitializers public class ColumnHeaderNotRepeated : SpreadsheetView.CircularScrollingConfigurationState {
+        @_hasMissingDesignatedInitializers public class RowHeaderStartsFirstColumn : SpreadsheetView.CircularScrollingConfigurationState {
+          @objc deinit
+        }
+        @_hasMissingDesignatedInitializers public class ColumnHeaderStartsFirstRow : SpreadsheetView.CircularScrollingConfigurationState {
+          @objc deinit
+        }
+        @objc deinit
+      }
+      @objc deinit
+    }
+    @_hasMissingDesignatedInitializers public class RowHeaderStartsFirstColumn : SpreadsheetView.CircularScrollingConfigurationState {
+      @_hasMissingDesignatedInitializers public class RowHeaderNotRepeated : SpreadsheetView.CircularScrollingConfigurationState {
+        @objc deinit
+      }
+      @objc deinit
+    }
+    @_hasMissingDesignatedInitializers public class ColumnHeaderStartsFirstRow : SpreadsheetView.CircularScrollingConfigurationState {
+      @_hasMissingDesignatedInitializers public class ColumnHeaderNotRepeated : SpreadsheetView.CircularScrollingConfigurationState {
+        @objc deinit
+      }
+      @objc deinit
+    }
+    @objc deinit
+  }
+}
+public protocol CircularScrollingConfigurationState {
+}
+public protocol CircularScrollingConfiguration {
+  var options: SpreadsheetView.CircularScrolling.Configuration.Options { get }
+}
+@_hasMissingDesignatedInitializers public class CircularScrollingConfigurationBuilder<T> : SpreadsheetView.CircularScrollingConfiguration where T : SpreadsheetView.CircularScrollingConfigurationState {
+  public var options: SpreadsheetView.CircularScrolling.Configuration.Options {
+    get
+  }
+  @objc deinit
+}
+extension SpreadsheetView.CircularScrollingConfigurationBuilder where T : SpreadsheetView.CircularScrolling.Horizontally {
+  public var rowHeaderStartsFirstColumn: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Horizontally.RowHeaderStartsFirstColumn> {
+    get
+  }
+  public var columnHeaderNotRepeated: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Horizontally.ColumnHeaderNotRepeated> {
+    get
+  }
+}
+extension SpreadsheetView.CircularScrollingConfigurationBuilder where T : SpreadsheetView.CircularScrolling.Horizontally.ColumnHeaderNotRepeated {
+  public var rowHeaderStartsFirstColumn: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Horizontally.ColumnHeaderNotRepeated.RowHeaderStartsFirstColumn> {
+    get
+  }
+}
+extension SpreadsheetView.CircularScrollingConfigurationBuilder where T : SpreadsheetView.CircularScrolling.Vertically {
+  public var columnHeaderStartsFirstRow: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Vertically.ColumnHeaderStartsFirstRow> {
+    get
+  }
+  public var rowHeaderNotRepeated: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Vertically.RowHeaderNotRepeated> {
+    get
+  }
+}
+extension SpreadsheetView.CircularScrollingConfigurationBuilder where T : SpreadsheetView.CircularScrolling.Vertically.RowHeaderNotRepeated {
+  public var columnHeaderStartsFirstRow: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Vertically.RowHeaderNotRepeated.ColumnHeaderStartsFirstRow> {
+    get
+  }
+}
+extension SpreadsheetView.CircularScrollingConfigurationBuilder where T : SpreadsheetView.CircularScrolling.Both {
+  public var rowHeaderStartsFirstColumn: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.RowHeaderStartsFirstColumn> {
+    get
+  }
+  public var columnHeaderStartsFirstRow: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.ColumnHeaderStartsFirstRow> {
+    get
+  }
+  public var columnHeaderNotRepeated: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.ColumnHeaderNotRepeated> {
+    get
+  }
+  public var rowHeaderNotRepeated: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.RowHeaderNotRepeated> {
+    get
+  }
+}
+extension SpreadsheetView.CircularScrollingConfigurationBuilder where T : SpreadsheetView.CircularScrolling.Both.RowHeaderStartsFirstColumn {
+  public var rowHeaderNotRepeated: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.RowHeaderStartsFirstColumn.RowHeaderNotRepeated> {
+    get
+  }
+}
+extension SpreadsheetView.CircularScrollingConfigurationBuilder where T : SpreadsheetView.CircularScrolling.Both.ColumnHeaderStartsFirstRow {
+  public var columnHeaderNotRepeated: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.ColumnHeaderStartsFirstRow.ColumnHeaderNotRepeated> {
+    get
+  }
+}
+extension SpreadsheetView.CircularScrollingConfigurationBuilder where T : SpreadsheetView.CircularScrolling.Both.ColumnHeaderNotRepeated {
+  public var rowHeaderNotRepeated: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.ColumnHeaderNotRepeated.RowHeaderNotRepeated> {
+    get
+  }
+  public var rowHeaderStartsFirstColumn: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.ColumnHeaderNotRepeated.RowHeaderStartsFirstColumn> {
+    get
+  }
+  public var columnHeaderStartsFirstRow: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.ColumnHeaderNotRepeated.ColumnHeaderStartsFirstRow> {
+    get
+  }
+}
+extension SpreadsheetView.CircularScrollingConfigurationBuilder where T : SpreadsheetView.CircularScrolling.Both.ColumnHeaderNotRepeated.RowHeaderNotRepeated {
+  public var rowHeaderStartsFirstColumn: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.ColumnHeaderNotRepeated.RowHeaderNotRepeated.RowHeaderStartsFirstColumn> {
+    get
+  }
+  public var columnHeaderStartsFirstRow: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.ColumnHeaderNotRepeated.RowHeaderNotRepeated.ColumnHeaderStartsFirstRow> {
+    get
+  }
+}
+extension SpreadsheetView.CircularScrollingConfigurationBuilder where T : SpreadsheetView.CircularScrolling.Both.RowHeaderNotRepeated {
+  public var columnHeaderNotRepeated: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.RowHeaderNotRepeated.ColumnHeaderNotRepeated> {
+    get
+  }
+  public var rowHeaderStartsFirstColumn: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.RowHeaderNotRepeated.RowHeaderStartsFirstColumn> {
+    get
+  }
+  public var columnHeaderStartsFirstRow: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.RowHeaderNotRepeated.ColumnHeaderStartsFirstRow> {
+    get
+  }
+}
+extension SpreadsheetView.CircularScrollingConfigurationBuilder where T : SpreadsheetView.CircularScrolling.Both.RowHeaderNotRepeated.ColumnHeaderNotRepeated {
+  public var rowHeaderStartsFirstColumn: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.RowHeaderNotRepeated.ColumnHeaderNotRepeated.RowHeaderStartsFirstColumn> {
+    get
+  }
+  public var columnHeaderStartsFirstRow: SpreadsheetView.CircularScrollingConfigurationBuilder<SpreadsheetView.CircularScrolling.Both.RowHeaderNotRepeated.ColumnHeaderNotRepeated.ColumnHeaderStartsFirstRow> {
+    get
+  }
+}
+extension SpreadsheetView.CircularScrollingConfigurationBuilder : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct ScrollPosition : Swift.OptionSet {
+  public static var top: SpreadsheetView.ScrollPosition
+  public static var centeredVertically: SpreadsheetView.ScrollPosition
+  public static var bottom: SpreadsheetView.ScrollPosition
+  public static var left: SpreadsheetView.ScrollPosition
+  public static var centeredHorizontally: SpreadsheetView.ScrollPosition
+  public static var right: SpreadsheetView.ScrollPosition
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public typealias ArrayLiteralElement = SpreadsheetView.ScrollPosition
+  public typealias Element = SpreadsheetView.ScrollPosition
+  public typealias RawValue = Swift.Int
+}
+extension SpreadsheetView.ScrollPosition : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension SpreadsheetView.Spreadsheet {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+}
+public protocol SpreadsheetViewDataSource : AnyObject {
+  func numberOfColumns(in spreadsheetView: SpreadsheetView.Spreadsheet) -> Swift.Int
+  func numberOfRows(in spreadsheetView: SpreadsheetView.Spreadsheet) -> Swift.Int
+  func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, widthForColumn column: Swift.Int) -> CoreGraphics.CGFloat
+  func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, heightForRow row: Swift.Int) -> CoreGraphics.CGFloat
+  func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, cellForItemAt indexPath: Foundation.IndexPath) -> SpreadsheetView.Cell?
+  func mergedCells(in spreadsheetView: SpreadsheetView.Spreadsheet) -> [SpreadsheetView.CellRange]
+  func frozenColumns(in spreadsheetView: SpreadsheetView.Spreadsheet) -> Swift.Int
+  func frozenRows(in spreadsheetView: SpreadsheetView.Spreadsheet) -> Swift.Int
+}
+extension SpreadsheetView.SpreadsheetViewDataSource {
+  public func spreadsheetView(_ spreadsheetView: SpreadsheetView.Spreadsheet, cellForItemAt indexPath: Foundation.IndexPath) -> SpreadsheetView.Cell?
+  public func mergedCells(in spreadsheetView: SpreadsheetView.Spreadsheet) -> [SpreadsheetView.CellRange]
+  public func frozenColumns(in spreadsheetView: SpreadsheetView.Spreadsheet) -> Swift.Int
+  public func frozenRows(in spreadsheetView: SpreadsheetView.Spreadsheet) -> Swift.Int
+}
+public struct Location : Swift.Hashable {
+  public let row: Swift.Int
+  public let column: Swift.Int
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (lhs: SpreadsheetView.Location, rhs: SpreadsheetView.Location) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension SpreadsheetView.Spreadsheet {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func insertSubview(_ view: UIKit.UIView, at index: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func exchangeSubview(at index1: Swift.Int, withSubviewAt index2: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func addSubview(_ view: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func insertSubview(_ view: UIKit.UIView, belowSubview siblingSubview: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func insertSubview(_ view: UIKit.UIView, aboveSubview siblingSubview: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func bringSubviewToFront(_ view: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func sendSubviewToBack(_ view: UIKit.UIView)
+}
+public struct Borders {
+  public var top: SpreadsheetView.BorderStyle
+  public var bottom: SpreadsheetView.BorderStyle
+  public var left: SpreadsheetView.BorderStyle
+  public var right: SpreadsheetView.BorderStyle
+  public static func all(_ style: SpreadsheetView.BorderStyle) -> SpreadsheetView.Borders
+}
+public enum BorderStyle {
+  case none
+  case solid(width: CoreGraphics.CGFloat, color: UIKit.UIColor)
+}
+extension SpreadsheetView.BorderStyle : Swift.Equatable {
+  public static func == (lhs: SpreadsheetView.BorderStyle, rhs: SpreadsheetView.BorderStyle) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class Spreadsheet : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var dataSource: SpreadsheetView.SpreadsheetViewDataSource? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var delegate: SpreadsheetView.SpreadsheetViewDelegate?
+  @_Concurrency.MainActor(unsafe) public var intercellSpacing: CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) public var gridStyle: SpreadsheetView.GridStyle
+  @_Concurrency.MainActor(unsafe) public var allowsSelection: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var allowsMultipleSelection: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var showsVerticalScrollIndicator: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var showsHorizontalScrollIndicator: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var scrollsToTop: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var circularScrolling: SpreadsheetView.CircularScrollingConfiguration {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var backgroundView: UIKit.UIView? {
+    get
+    set
+  }
+  @available(iOS 11.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func safeAreaInsetsDidChange()
+  @_Concurrency.MainActor(unsafe) public var visibleCells: [SpreadsheetView.Cell] {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var indexPathsForVisibleItems: [Foundation.IndexPath] {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var indexPathForSelectedItem: Foundation.IndexPath? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var indexPathsForSelectedItems: [Foundation.IndexPath] {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var isDirectionalLockEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var bounces: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var alwaysBounceVertical: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var alwaysBounceHorizontal: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var stickyRowHeader: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var stickyColumnHeader: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isPagingEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var isScrollEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var indicatorStyle: UIKit.UIScrollView.IndicatorStyle {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var decelerationRate: CoreGraphics.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var numberOfColumns: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var numberOfRows: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var frozenColumns: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var frozenRows: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var mergedCells: [SpreadsheetView.CellRange] {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var scrollView: UIKit.UIScrollView {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc(registerClass:forCellWithReuseIdentifier:) @_Concurrency.MainActor(unsafe) public func register(_ cellClass: SpreadsheetView.Cell.Type, forCellWithReuseIdentifier identifier: Swift.String)
+  @objc(registerNib:forCellWithReuseIdentifier:) @_Concurrency.MainActor(unsafe) public func register(_ nib: UIKit.UINib, forCellWithReuseIdentifier identifier: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func reloadData()
+  @_Concurrency.MainActor(unsafe) public func dequeueReusableCell(withReuseIdentifier identifier: Swift.String, for indexPath: Foundation.IndexPath) -> SpreadsheetView.Cell
+  @_Concurrency.MainActor(unsafe) public func scrollToItem(at indexPath: Foundation.IndexPath, at scrollPosition: SpreadsheetView.ScrollPosition, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func selectItem(at indexPath: Foundation.IndexPath?, animated: Swift.Bool, scrollPosition: SpreadsheetView.ScrollPosition)
+  @_Concurrency.MainActor(unsafe) public func deselectItem(at indexPath: Foundation.IndexPath, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func indexPathForItem(at point: CoreGraphics.CGPoint) -> Foundation.IndexPath?
+  @_Concurrency.MainActor(unsafe) public func cellForItem(at indexPath: Foundation.IndexPath) -> SpreadsheetView.Cell?
+  @_Concurrency.MainActor(unsafe) public func cellsForItem(at indexPath: Foundation.IndexPath) -> [SpreadsheetView.Cell]
+  @_Concurrency.MainActor(unsafe) public func rectForItem(at indexPath: Foundation.IndexPath) -> CoreGraphics.CGRect
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class Cell : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) final public let contentView: UIKit.UIView
+  @_Concurrency.MainActor(unsafe) public var backgroundView: UIKit.UIView? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var selectedBackgroundView: UIKit.UIView? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var isHighlighted: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var isSelected: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var gridlines: SpreadsheetView.Gridlines
+  @_Concurrency.MainActor(unsafe) public var borders: SpreadsheetView.Borders {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var reuseIdentifier: Swift.String? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) open func prepareForReuse()
+  @objc deinit
+}
+extension SpreadsheetView.Cell : Swift.Comparable {
+  @_Concurrency.MainActor(unsafe) public static func < (lhs: SpreadsheetView.Cell, rhs: SpreadsheetView.Cell) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers final public class CellRange {
+  final public let from: SpreadsheetView.Location
+  final public let to: SpreadsheetView.Location
+  final public let columnCount: Swift.Int
+  final public let rowCount: Swift.Int
+  convenience public init(from: (row: Swift.Int, column: Swift.Int), to: (row: Swift.Int, column: Swift.Int))
+  convenience public init(from: Foundation.IndexPath, to: Foundation.IndexPath)
+  final public func contains(_ indexPath: Foundation.IndexPath) -> Swift.Bool
+  final public func contains(_ cellRange: SpreadsheetView.CellRange) -> Swift.Bool
+  @objc deinit
+}
+extension SpreadsheetView.CellRange : Swift.Hashable {
+  final public func hash(into hasher: inout Swift.Hasher)
+  public static func == (lhs: SpreadsheetView.CellRange, rhs: SpreadsheetView.CellRange) -> Swift.Bool
+  final public var hashValue: Swift.Int {
+    get
+  }
+}
+extension SpreadsheetView.CellRange : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  final public var description: Swift.String {
+    get
+  }
+  final public var debugDescription: Swift.String {
+    get
+  }
+}
+extension Foundation.IndexPath {
+  public var column: Swift.Int {
+    get
+  }
+  public init(row: Swift.Int, column: Swift.Int)
+}
+extension SpreadsheetView.Spreadsheet {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func resizableSnapshotView(from rect: CoreGraphics.CGRect, afterScreenUpdates afterUpdates: Swift.Bool, withCapInsets capInsets: UIKit.UIEdgeInsets) -> UIKit.UIView?
+}

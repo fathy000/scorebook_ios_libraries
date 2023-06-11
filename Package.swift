@@ -10,6 +10,12 @@ let package = Package(
         .library(
             name: "ScorebookIOSLibraries",
             targets: ["ScorebookIOSLibraries"]),
+        .library(name: "SVProgressHUD",
+                 targets: ["SVProgressHUD"]),
+        .library(name: "ScorebookFoundation",
+                 targets: ["ScorebookFoundation"]),
+        .library(name: "SpreadsheetView",
+                 targets: ["SpreadsheetView"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,5 +30,11 @@ let package = Package(
         .testTarget(
             name: "ScorebookIOSLibrariesTests",
             dependencies: ["ScorebookIOSLibraries"]),
+        .binaryTarget(name: "SVProgressHUD",
+                      path: "SVProgressHUD.xcframework"),
+        .binaryTarget(name: "ScorebookFoundation",
+                      path: "ScorebookFoundation.xcframework"),
+        .binaryTarget(name: "SpreadsheetView",
+                      path: "SpreadsheetView.xcframework")
     ]
 )

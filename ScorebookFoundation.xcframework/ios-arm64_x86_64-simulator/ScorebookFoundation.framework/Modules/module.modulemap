@@ -1,0 +1,11 @@
+framework module ScorebookFoundation {
+  umbrella header "ScorebookFoundation.h"
+
+  export *
+  module * { export * }
+}
+
+module ScorebookFoundation.Swift {
+  header "ScorebookFoundation-Swift.h"
+  requires objc
+}

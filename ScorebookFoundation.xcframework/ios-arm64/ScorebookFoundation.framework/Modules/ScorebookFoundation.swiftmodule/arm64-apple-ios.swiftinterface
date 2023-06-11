@@ -1,0 +1,187 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-module-flags: -target arm64-apple-ios15.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ScorebookFoundation
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+@_exported import ScorebookFoundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@frozen public enum Position : Swift.Int, Swift.CaseIterable {
+  case none
+  case pitcher
+  case catcher
+  case first
+  case second
+  case third
+  case short
+  case left
+  case center
+  case right
+  case designationBatter
+  case pinchHitter
+  case pinchRunner
+  public func katakana() -> Swift.String
+  public func positionString() -> Swift.String
+  public func numberPositionString() -> Swift.String
+  public static func startingPositions() -> [ScorebookFoundation.Position]
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [ScorebookFoundation.Position]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [ScorebookFoundation.Position] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct PlayerBoxPosition {
+  public let orderIndex: Swift.Int
+  public let playerNumberIndex: Swift.Int
+  public var order: Swift.Int {
+    get
+  }
+  public init(orderIndex: Swift.Int, playerNumberIndex: Swift.Int)
+}
+@frozen public enum BattingResult : Swift.Int, Swift.CaseIterable {
+  case none
+  case struckOutSwinging
+  case struckOutLooking
+  case struckOutBunting
+  case uncaughtThirdStrike
+  case fourBall
+  case deadBall
+  case pitcherGoro
+  case catcherGoro
+  case firstGoro
+  case secondGoro
+  case thirdGoro
+  case shortGoro
+  case leftGoro
+  case centerGoro
+  case rightGoro
+  case pitcherFly
+  case catcherFly
+  case firstFly
+  case secondFly
+  case thirdFly
+  case shortFly
+  case leftFly
+  case centerFly
+  case rightFly
+  case pitcherFaulFly
+  case catcherFaulFly
+  case firstFaulFly
+  case secondFaulFly
+  case thirdFaulFly
+  case shortFaulFly
+  case leftFaulFly
+  case centerFaulFly
+  case rightFaulFly
+  case pitcherLiner
+  case catcherLiner
+  case firstLiner
+  case secondLiner
+  case thirdLiner
+  case shortLiner
+  case leftLiner
+  case centerLiner
+  case rightLiner
+  case pitcherError
+  case catcherError
+  case firstError
+  case secondError
+  case thirdError
+  case shortError
+  case leftError
+  case centerError
+  case rightError
+  case pitcherFielderChoice
+  case catcherFielderChoice
+  case firstFielderChoice
+  case secondFielderChoice
+  case thirdFielderChoice
+  case shortFielderChoice
+  case leftFielderChoice
+  case centerFielderChoice
+  case rightFielderChoice
+  case pitcherBant
+  case catcherBant
+  case firstBant
+  case secondBant
+  case thirdBant
+  case shortBant
+  case pitcherHit
+  case catcherHit
+  case firstHit
+  case secondHit
+  case thirdHit
+  case shortHit
+  case leftHit
+  case centerHit
+  case rightHit
+  case leftTwoBaseHit
+  case centerTwoBaseHit
+  case rightTwoBaseHit
+  case leftThreeBaseHit
+  case centerThreeBaseHit
+  case rightThreeBaseHit
+  case leftHomeRun
+  case leftCenterHomeRun
+  case centerHomeRun
+  case centerRightHomeRun
+  case rightHomeRun
+  case catchersInterfare
+  case interfareDiffence
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [ScorebookFoundation.BattingResult]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [ScorebookFoundation.BattingResult] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@frozen public enum LeftOrRight {
+  case left
+  case right
+  public static func == (a: ScorebookFoundation.LeftOrRight, b: ScorebookFoundation.LeftOrRight) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@frozen public enum BattingTurn {
+  case first
+  case second
+  public var katakana: Swift.String {
+    get
+  }
+  public var otherSide: ScorebookFoundation.BattingTurn {
+    get
+  }
+  public var isFirst: Swift.Bool {
+    get
+  }
+  public static func == (a: ScorebookFoundation.BattingTurn, b: ScorebookFoundation.BattingTurn) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ScorebookFoundation.Position : Swift.Equatable {}
+extension ScorebookFoundation.Position : Swift.Hashable {}
+extension ScorebookFoundation.Position : Swift.RawRepresentable {}
+extension ScorebookFoundation.Position : Swift.Sendable {}
+extension ScorebookFoundation.BattingResult : Swift.Equatable {}
+extension ScorebookFoundation.BattingResult : Swift.Hashable {}
+extension ScorebookFoundation.BattingResult : Swift.RawRepresentable {}
+extension ScorebookFoundation.BattingResult : Swift.Sendable {}
+extension ScorebookFoundation.LeftOrRight : Swift.Equatable {}
+extension ScorebookFoundation.LeftOrRight : Swift.Hashable {}
+extension ScorebookFoundation.LeftOrRight : Swift.Sendable {}
+extension ScorebookFoundation.BattingTurn : Swift.Equatable {}
+extension ScorebookFoundation.BattingTurn : Swift.Hashable {}
+extension ScorebookFoundation.BattingTurn : Swift.Sendable {}
