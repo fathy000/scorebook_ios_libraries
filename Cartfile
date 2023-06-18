@@ -1,0 +1,5 @@
+github "SVProgressHUD/SVProgressHUD"
+
+# carthage updateで取得
+# /Carthage/Checkouts/SVProgressHUD/SVProgressHUD.xcodeprojのiOSバージョンを更新
+# carthage build --use-xcframeworksでbuildする
