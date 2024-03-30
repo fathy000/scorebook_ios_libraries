@@ -1,13 +1,13 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
-// swift-module-flags: -target arm64-apple-ios15.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ScorebookFoundation
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios15.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ScorebookFoundation
 import Foundation
 @_exported import ScorebookFoundation
 import Swift
 import UIKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 @frozen public enum Position : Swift.Int, Swift.CaseIterable {
   case none
   case pitcher
@@ -24,6 +24,7 @@ import _StringProcessing
   case pinchRunner
   public func katakana() -> Swift.String
   public func positionString() -> Swift.String
+  public func longPositionString() -> Swift.String
   public func numberPositionString() -> Swift.String
   public static func startingPositions() -> [ScorebookFoundation.Position]
   public init?(rawValue: Swift.Int)

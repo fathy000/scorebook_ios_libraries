@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ScorebookFoundation-Swift.h</key>
 		<data>
-		nkXYKltIXzFT+ARVJ4kVyH65VFI=
+		Wt2c4dSBf7073QyFHO/Ovbc3sIU=
 		</data>
 		<key>Headers/ScorebookFoundation.h</key>
 		<data>
@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZnFaCgCWzOoTWR+Xd+GIs7D8/Mg=
+		dLbGY0e6Jd4MFxNxYyRuGKa1OYw=
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		IV73Pv+YFDCefhQLDl2kYTm/PNY=
+		JWs/viTZ7jUdjz3NtqZUKwtUFxw=
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		NPhsiIQf1M1lofV7EKLxUIbwCNE=
+		adhrqrcck2wRL8dgkxUHlDEgnmA=
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		H8BvmOdtZd936axPNRTmB+ZeOJY=
+		SciBMBMxfrkD4AT9LoAiQkK4zQY=
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		NPhsiIQf1M1lofV7EKLxUIbwCNE=
+		adhrqrcck2wRL8dgkxUHlDEgnmA=
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		HK3POpF4YxFdVvKam4LnKO1W1V0=
+		v5z85fLoq1Cg13niBfnHlCBqRRo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		SGgnd5HvP0/W/LCAay60NXuizXE=
+		35RihXwrsz4qS0z++V7iAvQCv88=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3lzhRsTP0s0lhDSPvJzMRT/PZChi2iA9W1vzONErkHE=
+			HDU1NCmC8nhiRA/+tNnoc48XRGtz9C7Zw3hyTIcTk+0=
 			</data>
 		</dict>
 		<key>Headers/ScorebookFoundation.h</key>
@@ -61,42 +61,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0mriMd8g2EXEh0RPIIVf1RXzymHU9GSiJrYGG7jYltQ=
+			YoQ+pOUqU5EWSEPf98nqhNg8xRvYm/lR2wC+yKKsKl0=
 			</data>
 		</dict>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CS2NYgvwHH9V++GR0gPjphyi0vZOEiTZuAo0uMd7KtU=
+			fyS5m27lCYfe12HMAj4B9N4SyNWJdaD8Dmo8vewv8VQ=
 			</data>
 		</dict>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bK/MBv/b1zYGKLoLAt1vV64naDpARlHqJ3ITeN51Lt8=
+			rCm1KbHquDNsZjvOnQ5HBMFi5FHHbcyXhQ+MPI++tdg=
 			</data>
 		</dict>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CS2NYgvwHH9V++GR0gPjphyi0vZOEiTZuAo0uMd7KtU=
+			fyS5m27lCYfe12HMAj4B9N4SyNWJdaD8Dmo8vewv8VQ=
 			</data>
 		</dict>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m9D2msUkLyL2yWM1jpclJgQAdfUPPC2gg5yUKIVszaU=
+			EuJbBdKDJthz3t2wAzkUMiruc+AZxQe6u/MHdbDCI0g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jwRvxUC6erk0rrNINPaEDjMgrQUV7wcgpY2Ihi4rTBE=
+			09XaUrt6r+joFothTLzz4p+/5OGhOAXDddUr0sh5bdU=
 			</data>
 		</dict>
 	</dict>

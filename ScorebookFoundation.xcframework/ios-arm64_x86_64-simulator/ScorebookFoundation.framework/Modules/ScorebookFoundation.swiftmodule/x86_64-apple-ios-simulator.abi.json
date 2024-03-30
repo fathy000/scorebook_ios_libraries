@@ -557,6 +557,27 @@
           },
           {
             "kind": "Function",
+            "name": "longPositionString",
+            "printedName": "longPositionString()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19ScorebookFoundation8PositionO04longC6StringSSyF",
+            "mangledName": "$s19ScorebookFoundation8PositionO04longC6StringSSyF",
+            "moduleName": "ScorebookFoundation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "numberPositionString",
             "printedName": "numberPositionString()",
             "children": [

@@ -1,7 +1,7 @@
 framework module ScorebookFoundation {
   umbrella header "ScorebookFoundation.h"
-
   export *
+
   module * { export * }
 }
 
