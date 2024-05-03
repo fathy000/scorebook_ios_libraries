@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		JWs/viTZ7jUdjz3NtqZUKwtUFxw=
+		i5Ue/08MYUnsfzIEx4g7RuvcyhY=
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		yI3upsjPsHT9qaK9nj5N51T8iKc=
+		PKLIadKt+Z2Pi95sTUycqvTK9uQ=
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		JWs/viTZ7jUdjz3NtqZUKwtUFxw=
+		i5Ue/08MYUnsfzIEx4g7RuvcyhY=
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MyZWcKgPCvHqmYSKTRCkq/mgEE0=
+		hZKhthelGq5upOE1cJs0PApldt0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,7 +81,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YoQ+pOUqU5EWSEPf98nqhNg8xRvYm/lR2wC+yKKsKl0=
+			ycj7N7KPq1SMTDSuTVZBKZUhOGBF1LVteMy+BBYQ7i0=
 			</data>
 		</dict>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -109,14 +109,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TQ1gRJfoc+aj9bSUtEn5nkdfQZhMCFMpUXoRw1CIzMc=
+			659PtZB/kFTGqObncZ56B8CKNbtrWpXxN4iZlt2Bh/k=
 			</data>
 		</dict>
 		<key>Modules/ScorebookFoundation.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YoQ+pOUqU5EWSEPf98nqhNg8xRvYm/lR2wC+yKKsKl0=
+			ycj7N7KPq1SMTDSuTVZBKZUhOGBF1LVteMy+BBYQ7i0=
 			</data>
 		</dict>
 		<key>Modules/ScorebookFoundation.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qnNcTfbxkNS9uH1VQFBLzqZ4xM3sEOaMTDc5/fak514=
+			EA6SQQDDjL1YsOpWsVquhd3hFgRsjZk0p/w1WUDkK+A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
