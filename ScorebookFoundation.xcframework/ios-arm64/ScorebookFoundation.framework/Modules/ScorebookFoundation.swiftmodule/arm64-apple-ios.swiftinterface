@@ -172,6 +172,13 @@ public struct PlayerBoxPosition {
     get
   }
 }
+public typealias Inning = Swift.Int
+public typealias Order = Swift.Int
+extension Swift.Int {
+  public var index: Swift.Int {
+    get
+  }
+}
 extension ScorebookFoundation.Position : Swift.Equatable {}
 extension ScorebookFoundation.Position : Swift.Hashable {}
 extension ScorebookFoundation.Position : Swift.RawRepresentable {}

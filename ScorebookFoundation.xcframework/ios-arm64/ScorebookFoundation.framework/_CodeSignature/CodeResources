@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		i5Ue/08MYUnsfzIEx4g7RuvcyhY=
+		X/Ya/Ib5Fs0EJfhBO4X2pGsHfpg=
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		adhrqrcck2wRL8dgkxUHlDEgnmA=
+		3Nx2MfsmRvz727/f8YPctoTEDko=
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		adhrqrcck2wRL8dgkxUHlDEgnmA=
+		3Nx2MfsmRvz727/f8YPctoTEDko=
 		</data>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		H0l0nWLUDaquwoavbQhM5esNWCA=
+		tYvSloKjOL8tY1TLa6Q/wDTsLwY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,14 +61,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ycj7N7KPq1SMTDSuTVZBKZUhOGBF1LVteMy+BBYQ7i0=
+			GqPG2i5J3vVMbV9jvmOqtSnjHeza43mfS+664WU+EO4=
 			</data>
 		</dict>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fyS5m27lCYfe12HMAj4B9N4SyNWJdaD8Dmo8vewv8VQ=
+			tlD7NtGLgM+wx80SVf1kLnBd7dbE9wjfI2RvtoA9pAs=
 			</data>
 		</dict>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fyS5m27lCYfe12HMAj4B9N4SyNWJdaD8Dmo8vewv8VQ=
+			tlD7NtGLgM+wx80SVf1kLnBd7dbE9wjfI2RvtoA9pAs=
 			</data>
 		</dict>
 		<key>Modules/ScorebookFoundation.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iNcFJQ699ne4eKJ/NS6nRhWNYvIIJuC8pX6Vlb3e4N0=
+			z1QpyV1XmYLX6Td8vQJMoZxqKLwgDIhTN4bUpLMFk0o=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
